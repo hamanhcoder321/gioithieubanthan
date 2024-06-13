@@ -72,8 +72,8 @@ header ul li:hover{
 .gradientText{
   display: inline-block;
   background: var(--gradient-bg);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  --webkit-background-clip: text;
+  --webkit-text-fill-color: transparent;
 }
 .job{
    display: inline-block;
@@ -226,8 +226,6 @@ header input{
 /* iPads (portrait and landscape) ----------- */
 @media only screen and (max-width:1024px) {
 	/* Styles */
-    header  ul{
-    }
     .banner{
         grid-template-columns: 40% 60%;
     }
