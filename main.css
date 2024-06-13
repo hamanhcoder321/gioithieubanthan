@@ -303,3 +303,124 @@ header input{
     }
     
 }
+/* General styles */
+body {
+    margin: 0;
+    background-color: var(--light);
+    color: var(--color-text);
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: calc(100% - 20px);
+    padding: 10px;
+    border-bottom: 1px solid #dce1e4;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    background-color: var(--light);
+    z-index: 1;
+}
+
+header .logo img {
+    height: 50px;
+}
+
+header ul {
+    margin: 0;
+    list-style: none;
+    display: flex;
+    height: 100%;
+    justify-content: end;
+    align-items: center;
+}
+
+header ul li {
+    padding: 0 30px;
+}
+
+header ul li:hover {
+    text-decoration: underline;
+}
+
+/* Mobile styles */
+@media screen and (max-width: 767px) {
+    .banner {
+        grid-template-columns: 1fr;
+    }
+
+    .banner .content h1 {
+        font-size: 1.2em;
+    }
+
+    .banner .avatar {
+        grid-row-start: 1;
+    }
+
+    header .navDiv {
+        display: flex;
+        justify-content: end;
+    }
+
+    header label {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: red;
+        box-shadow: var(--box-shadow);
+        border-radius: 50%;
+    }
+
+    header .nav {
+        position: fixed;
+        background-color: #F0F3F5;
+        z-index: 1;
+        width: 70%;
+        height: 100vh;
+        left: 0;
+        top: 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 70px);
+        transform: translateX(-100%);
+        transition: 0.5s;
+    }
+
+    input#menu:checked ~ .nav {
+        transform: translateX(0%);
+    }
+
+    header .nav label {
+        width: 50px;
+        height: 50px;
+        box-shadow: var(--box-shadow);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        color: red;
+    }
+
+    header .nav li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .banner .content {
+        padding-right: 0px;
+    }
+
+    .listSkill {
+        grid-template-columns: 1fr;
+    }
+
+    .listProject {
+        grid-template-columns: 1fr;
+    }
+}
