@@ -72,8 +72,8 @@ header ul li:hover{
 .gradientText{
   display: inline-block;
   background: var(--gradient-bg);
-  --webkit-background-clip: text;
-  --webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .job{
    display: inline-block;
@@ -383,7 +383,7 @@ header ul li:hover {
         top: 0;
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(5, 70px);
+        grid-template-rows: repeat(6, 70px);
         transform: translateX(-100%);
         transition: 0.5s;
     }
